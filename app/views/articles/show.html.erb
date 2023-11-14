@@ -1,0 +1,11 @@
+<h1 class="d-flex">
+  <%= @article.title %>
+  <small class="d-flex">
+    <small><%= link_to "Edit", edit_article_path(@article) %></small>
+    <small><%= link_to "Delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></small>
+  </small>
+
+</h1>
+<p><%= @article.content %></p>
+
+<p><%= link_to "Back to main page", articles_path %></p>
